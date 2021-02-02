@@ -3,13 +3,15 @@ import './App.css';
 import axios from 'axios';
 import Image from './Components/image.js';
 import Info from './Components/info.js';
+import {AppWrap} from './Components/styles';
+
 
 function App() {
      const [data, setData] = useState('');
 
      useEffect(() => {
           axios.get(
-               'https://api.nasa.gov/planetary/apod?api_key=JcscI1lYExVXYgatImbIRf0G728iv6lXTqNeEqge&date=2018-12-18'
+               'https://api.nasa.gov/planetary/apod?api_key=JcscI1lYExVXYgatImbIRf0G728iv6lXTqNeEqge&date=2020-12-18'
           )
                .then((returnedData) => {
                     setData(returnedData.data);
@@ -24,10 +26,10 @@ function App() {
      }, []);
 
      return (
-          <div className='App'>
+          <AppWrap>
                <Image url={data.url} title={data.title} />
                <Info explanation={data.explanation} copyright={data.copyright} date={data.date}/>
-          </div>
+          </AppWrap>
      );
 }
 

@@ -1,14 +1,13 @@
 import React from 'react';
-
+import {InfoWrap} from './styles'
 
 function Info(props) {
      return (
-               <div>
+               <InfoWrap>
                     <p>{props.explanation}</p>
                     <h2>Copyright: {props.copyright}</h2>
                     <h2>Picture of the day on: {props.date}</h2>
-
-               </div>
+               </InfoWrap>
           );
 }
 export default Info;
