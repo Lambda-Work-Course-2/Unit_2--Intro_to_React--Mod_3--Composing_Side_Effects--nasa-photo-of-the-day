@@ -43,7 +43,9 @@ const InfoWrap = styled.div`
      overflow: hidden;
      font-size: 19px;
      background: white;
-     padding: 15px;
+     padding: 35px;
      border-radius: 15px;
+     text-align: justify;
+
 `
 export {StyledH1, AppWrap, StyledImg, InfoWrap}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {InfoWrap} from './styles'
 
+
 function Info(props) {
      return (
                <InfoWrap>
